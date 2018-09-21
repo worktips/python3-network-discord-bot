@@ -132,7 +132,7 @@ async def list_servers():
     await client.wait_until_ready()
     while not client.is_closed:
         # you can customize the output message(s) below
-        print("--- BOT ONLINE ---")
+        print("--- NETWORK BOT ONLINE ---")
         for server in client.servers:
             # you can customize the output message(s) below
             print('Active servers: ' + str(server.name))
