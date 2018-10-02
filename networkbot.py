@@ -57,6 +57,7 @@ async def height():
         raw_response = await session.get(url)
         response = await raw_response.text()
         response = json.loads(response)
+        # you can customize the output message(s) below
         await client.say("🌐 **Network height:** " + str(response['height']))
 
 # commmand: &hash
@@ -68,6 +69,7 @@ async def hash():
         raw_response = await session.get(url)
         response = await raw_response.text()
         response = json.loads(response)
+        # you can customize the output message(s) below
         await client.say("🌐 **Network hash rate:** " + str(response['hashrate']) + " H/s")
 
 # commmand: &diff
@@ -79,6 +81,7 @@ async def diff():
         raw_response = await session.get(url)
         response = await raw_response.text()
         response = json.loads(response)
+        # you can customize the output message(s) below
         await client.say("🌐 **Network difficulty:** " + str(response['difficulty']))
 
 # commmand: &tx
@@ -90,6 +93,7 @@ async def tx():
         raw_response = await session.get(url)
         response = await raw_response.text()
         response = json.loads(response)
+        # you can customize the output message(s) below
         await client.say("🌐 **Network transactions:** " + str(response['tx_count']))
 
 # commmand: &txpool
@@ -101,6 +105,7 @@ async def txpool():
         raw_response = await session.get(url)
         response = await raw_response.text()
         response = json.loads(response)
+        # you can customize the output message(s) below
         await client.say("🌐 **Transactions pool:** " + str(response['tx_pool_size']))
 
 # commmand: &ver
@@ -112,6 +117,7 @@ async def ver():
         raw_response = await session.get(url)
         response = await raw_response.text()
         response = json.loads(response)
+        # you can customize the output message(s) below
         await client.say("🌐 **Daemon Version:** " + str(response['version']))
 
 # commmand: &stats
@@ -123,6 +129,7 @@ async def stats():
         raw_response = await session.get(url)
         response = await raw_response.text()
         response = json.loads(response)
+        # you can customize the output message(s) below
         await client.say("🌐  NETWORK STATS\n**Height:** " + str(response['height']) + "    \n**Hash rate:** " + str(response['hashrate']) + " H/s    \n**Difficulty:** " + str(response['difficulty']) + "    \n**TX total:** " + str(response['tx_count']) + "    \n**TX in the pool:** " + str(response['tx_pool_size']) + "    \n**Daemon version:** " + str(response['version'])
          )
 
